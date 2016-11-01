@@ -4,17 +4,17 @@ package com.android.rejection.JavaBean;
  * Created by Administrator on 2016/8/19.
  */
 public class Person5 implements China {
-    private String Sex;
+    private String sex;
 
     public Person5() {
     }
 
     public String getSex() {
-        return Sex;
+        return sex;
     }
 
     public void setSex(String sex) {
-        Sex = sex;
+        this.sex = sex;
     }
 
     @Override
