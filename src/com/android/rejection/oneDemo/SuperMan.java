@@ -1,8 +1,5 @@
 package com.android.rejection.oneDemo;
 
-import com.android.rejection.oneDemo.ActionInterface;
-import com.android.rejection.oneDemo.Person;
-
 /**
  * Created by Administrator on 2016/7/21.
  */

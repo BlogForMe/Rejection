@@ -5,6 +5,8 @@ import java.lang.reflect.*;
 
 /**
  * Created by Administrator on 2016/7/21.
+ *
+ * 多种形式的集合
  */
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -16,11 +18,11 @@ public class Main {
 
 //        Demo4();
 
-//        Demo5();
+        Demo5();
 
 //        Demo6();
 //        Demo7();
-        Demo8();
+//        Demo8();
     }
 
 
@@ -50,7 +52,7 @@ public class Main {
     private static void demo3() {
         Class<?> class1 = null;
         try {
-            class1 = Class.forName("com.android.rejection.Person");
+            class1 = Class.forName("com.android.rejection.JavaBean.Person");
             //由于这里不能带参数，所以你要实例化这个类Person，一定要无参构造函数
             Person person = (Person) class1.newInstance();
             person.setAge(20);
@@ -98,7 +100,7 @@ public class Main {
      */
     public static void Demo5() throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.android.rejection.Person");
+        class1 = Class.forName("com.android.rejection.JavaBean.Person");
         Object obj = class1.newInstance();
         Field personNameField = class1.getDeclaredField("name");
         personNameField.setAccessible(true);
@@ -113,7 +115,7 @@ public class Main {
      */
     public static void Demo6() throws ClassNotFoundException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.android.rejection.SuperMan");
+        class1 = Class.forName("com.android.rejection.oneDemo.SuperMan");
 
         //取得父类名称
         Class<?> superClass = class1.getSuperclass();
@@ -157,7 +159,7 @@ public class Main {
      */
     public static void Demo7() throws ClassNotFoundException, NoSuchMethodException, SecurityException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.android.rejection.SuperMan");
+        class1 = Class.forName("com.android.rejection.oneDemo.SuperMan");
 
         System.out.println("Demo7: \n 调用无参数方法fy1()");
         Method method = class1.getMethod("fly");
@@ -175,7 +177,7 @@ public class Main {
      */
     public static void Demo8() throws ClassNotFoundException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.android.rejection.SuperMan");
+        class1 = Class.forName("com.android.rejection.oneDemo.SuperMan");
         String nameStirng = class1.getClassLoader().getClass().getName();
         System.out.println("Demo8 : 类加载器类名 " + nameStirng);
     }
